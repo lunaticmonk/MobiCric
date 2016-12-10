@@ -6,7 +6,7 @@ from datetime import datetime
 
 url1 = 'http://cricapi.com/api/matches'
 payload1 = {
-	'apikey' : 'HhIwYLm9nrhy8IqeSkF5bgDE3Iw2'
+	'apikey' : 'xxxxxxxxxxxxxxxxxxxxxxx'
 }
 request1 = requests.post(url1, params = payload1)
 data1 = json.loads(request1.text)
