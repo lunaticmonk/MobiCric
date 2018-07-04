@@ -6,7 +6,7 @@ from datetime import datetime
 
 url1 = 'http://cricapi.com/api/matches'
 payload1 = {
-	'apikey' : 'xxxxxxxxxxxxxxxxxxxxxxx'
+	'apikey' : 'xxxxxxxxxxxxxxxxxxxxxx'
 }
 request1 = requests.post(url1, params = payload1)
 data1 = json.loads(request1.text)
@@ -26,7 +26,7 @@ iterations = 0
 while( iterations < 1000 ):
 	url = 'http://cricapi.com/api/cricketScore'
 	payload = {
-		'apikey' : 'HhIwYLm9nrhy8IqeSkF5bgDE3Iw2',
+		'apikey' : 'xxxxxxxxxxxxxxxxxxxxxxx',
 		'unique_id' : selectedMatch['unique_id']
 	}
 
@@ -36,12 +36,12 @@ while( iterations < 1000 ):
 	print data['team-2']
 	print data['score']
 
-	account_sid = "ACac3a6b8ed095dd9aed47e83c94b09658"
-	auth_token = "1b49f04e42a0a401100ac498111beeaa"
+	account_sid = "xxxxxxxxxxxxxxxxxxxxxxx"
+	auth_token = "xxxxxxxxxxxxxxxxxxxxxxx"
 	client = TwilioRestClient(account_sid, auth_token)
 	msg = ">Match Status : " + data['team-1'] + ' vs ' + data['team-2'] + '\n' + data['score']
 
-	message = client.messages.create(to="+917801863049", from_="+19286158882",
+	message = client.messages.create(to="xxxxxxxxxx", from_="xxxxxxxxx",
 	                                     body=msg)
 
 	print 'Sending message....' + str(datetime.now()) 
